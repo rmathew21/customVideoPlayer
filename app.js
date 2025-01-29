@@ -19,13 +19,23 @@ function updateButton() {
 }
 
 function skip() {
-    console.log(this.dataset.skip);
-    video.currentTime += this.dataset.skip;
+    video.currentTime += parseFloat(this.dataset.skip);
 }
 
+function handleRangeUpdate() {
+    video[this.name] = this.value;
+    console.log(this.name);
+    console.log(this.value);
+}
+
+function handleProgress() {
+    console.log('progressBar change')
+}
 // Hook up the event listeners 
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
+ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+progress.addEventListener('change', handleProgress);
