@@ -6,11 +6,13 @@
     <title>HTML Video Player</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://fav.farm/📽️" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=fullscreen" />
 </head>
 <body>
     <div class="player">
-        <video src="652333414.mp4" class="playerVideo viewer"></video>
-
+        <video src="izzyMeetsJones.MP4" class="playerVideo viewer"></video>
+        
+        
         <div class="playerControls">
             <div class="progress">
                 <div class="progressFilled"></div>
@@ -20,6 +22,7 @@
             <input type="range" name="playbackRate" class="playerSlider" min="0.5" max="2" step="0.1" value="1">
             <button data-skip="-10" class="playerButton">« 10s</button>
             <button data-skip="25" class="playerButton">25s »</button>
+            <button class="playerButton" id="fscreen"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z"/></svg></button>
         </div>
     </div>
     
